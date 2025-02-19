@@ -208,9 +208,11 @@
   left: 1em;
 }
 
+/*
 .splide__arrow--prev svg {
-  /* transform: scaleX(-1) */
+  transform: scaleX(-1)
 }
+*/
 
 .splide__arrow--next {
   right: 1em;
@@ -327,9 +329,11 @@
   cursor: pointer;
 }
 
+/*
 .splide__track--nav > .splide__list > .splide__slide.is-active {
-  /* border: 3px solid #000 */
+  border: 3px solid #000
 }
+*/
 
 .splide__arrows--rtl .splide__arrow--prev {
   left: auto;
