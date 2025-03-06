@@ -28,6 +28,7 @@ export const animationSelectors = {
     testimonials: ".splide__slide.is-testimonial",
     gallery: ".splide__slide.is-gallery",
     marquee: ".splide__slide.is-marquee",
+    homePrograms: ".splide__slide.is-home-programs",
     textList: ".text-list_header, .text-list_richtext li",
   },
 };

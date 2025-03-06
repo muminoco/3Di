@@ -18,9 +18,10 @@ export const revealEffects = {
     createBaseAnimation(element, (target, tl) => {
       tl.from(target, {
         opacity: 0,
-        duration: 0.75,
+        duration: 1,
+        yPercent: -15,
         delay,
-        ease: "power2.out",
+        ease: "sine.out",
       });
     });
   },

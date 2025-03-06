@@ -1,4 +1,8 @@
-import { createFireOnceScrollTrigger } from "../utils/scrollTriggers.js";
+import {
+  createFireOnceScrollTrigger,
+  createReplayOnEntryScrollTrigger,
+  createScrollTrigger,
+} from "../utils/scrollTriggers.js";
 import { splitTextForAnimation, SPLIT_TYPES } from "../utils/textSplitter.js";
 
 // Default animation settings
@@ -20,7 +24,7 @@ function createBaseAnimation(element, animationCallback) {
   gsap.set(element, { opacity: 1 });
   const target = element;
   const tl = gsap.timeline({ paused: true });
-  createFireOnceScrollTrigger(target, tl);
+  createScrollTrigger(target, tl);
   animationCallback(target, tl);
 }
 
@@ -37,11 +41,11 @@ const lineAnimations = {
       const lines = target.querySelectorAll(".line");
       tl.from(lines, {
         opacity: 0,
-        scale: 0.95,
-        duration: 1.2,
+        yPercent: -15,
+        duration: 0.7,
         delay,
-        stagger: { amount: 0.4 },
-        ease: "power2.out",
+        stagger: 0.1,
+        ease: "sine.out",
       });
     });
   },
@@ -1016,12 +1020,13 @@ const letterAnimations = {
     createBaseAnimation(element, (target, tl) => {
       const chars = target.querySelectorAll(".char");
       tl.from(chars, {
-        filter: "blur(10px)",
+        filter: "blur(3px)",
+        color: "#046991",
         opacity: 0,
         duration: 0.8,
         delay,
-        stagger: 0.02,
-        ease: "power2.out",
+        stagger: 0.03,
+        ease: "sine.out",
       });
     });
   },

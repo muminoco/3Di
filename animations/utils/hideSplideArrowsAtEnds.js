@@ -31,6 +31,7 @@ window.hideArrowsAtEnds = function (splideInstance) {
 
 /*
 
+
 export function hideArrowsAtEnds(splideInstance) {
   splideInstance.on("arrows:updated", (prev, next, prevIndex, nextIndex) => {
     if (!prev || !next) return;

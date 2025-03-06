@@ -106,9 +106,8 @@ function runTextAnimations() {
   const { text } = animationSelectors;
 
   //  animateElements(text.headings, textEffects.line.line08, "Name of the element for debugging purposes");
-  animateElements(text.headings, textEffects.line.line21, "heading");
-
-  animateElements(text.paragraphs, revealEffects.reveal01, "paragraph");
+  animateElements(text.headings, textEffects.char.letter10, "heading");
+  animateElements(text.paragraphs, textEffects.line.line01, "paragraph");
   animateElements(text.eyebrows, revealEffects.reveal01, "eyebrows");
   // Simple fade in
 }
@@ -130,6 +129,11 @@ function runStaggerAnimations() {
   );
   animateElements(stagger.gallery, staggerEffects.stagger01, "gallery image");
   animateElements(stagger.textList, staggerEffects.stagger01, "text list");
+  animateElements(
+    stagger.homePrograms,
+    staggerEffects.stagger01,
+    "home programs"
+  );
   animateElements(stagger.marquee, staggerEffects.stagger01, "marquee");
 }
 
